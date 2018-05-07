@@ -1,0 +1,48 @@
+.gw_row:hover{
+    background-color: #eee;
+    color: #333;
+}
+.Jd-Je:not(:hover) {
+    background-color: #fff !important;
+    color: #333;
+}
+.gw_row{
+    user-select: auto !important;
+    pointer-events: auto !important;
+}
+div[role=listbox] div[role=option]:not(.gw_row)+div.gw_row,  div[role=listbox]>div[role=option].gw_row:first-child{
+    box-shadow: 0 -5px 0px #c8b18b, 0 -10px 0px #004065;
+    margin-top:10px
+}
+div[role=listbox]:empty {
+    opacity: 0;
+}
+div#loginIFrame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 9999999;
+    transition:0.35s opacity;
+
+    opacity:0;
+    pointer-events: none;
+}
+div#loginIFrame.active{
+    opacity:1;
+    pointer-events: all;
+}
+
+div#loginIFrame iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    border: none;
+    box-shadow: 0px 0px 41px 6px #00000059;
+}
